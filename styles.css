@@ -1,4 +1,4 @@
-/* Custom styles for Fade Culture Barber */
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
@@ -27,7 +27,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -41,7 +40,6 @@ body {
   border-radius: 3px;
 }
 
-/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -147,7 +145,6 @@ body {
   box-shadow: 0 8px 25px rgba(201, 168, 76, 0.3);
 }
 
-/* Mobile menu button */
 .menu-btn {
   display: none;
   background: none;
@@ -178,7 +175,6 @@ body {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Mobile menu */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -212,7 +208,6 @@ body {
   color: var(--gold);
 }
 
-/* Hero */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -322,8 +317,6 @@ body {
   border-color: var(--gold);
 }
 
-
-/* Sections */
 .section {
   padding: 5rem 1.5rem;
   max-width: 1280px;
@@ -360,7 +353,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* Services */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -429,7 +421,6 @@ body {
   font-size: 1.2rem;
 }
 
-/* Barbers */
 .barbers-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -509,7 +500,6 @@ body {
   color: var(--gold);
 }
 
-/* Booking */
 #reservas {
   background: linear-gradient(180deg, var(--dark) 0%, #0f0d08 50%, var(--dark) 100%);
 }
@@ -601,7 +591,6 @@ body {
   animation: fadeIn 0.4s ease;
 }
 
-/* Barber selection in booking */
 .barber-options {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -651,7 +640,6 @@ body {
   color: var(--gold);
 }
 
-/* Date & time */
 .date-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -731,7 +719,6 @@ body {
   color: rgba(201, 168, 76, 0.7);
 }
 
-/* Time grid — 1h intervals, 3 columns */
 .time-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -783,7 +770,6 @@ body {
   opacity: 1;
 }
 
-/* Booked slot — diseño claro y no intrusivo */
 .time-option.booked {
   cursor: not-allowed;
   pointer-events: none;
@@ -818,7 +804,6 @@ body {
   line-height: 1.4;
 }
 
-/* Confirm step */
 .confirm-card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -904,7 +889,6 @@ body {
   text-align: center;
 }
 
-/* Contact / Footer */
 .footer {
   background: var(--dark-card);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -951,7 +935,6 @@ body {
   font-size: 0.8rem;
 }
 
-/* Success modal */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -1005,7 +988,6 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -1064,8 +1046,6 @@ body {
   }
 }
 
-
-/* Client form (step 2) */
 .client-form {
   display: flex;
   flex-direction: column;
@@ -1126,7 +1106,6 @@ body {
   transition: color 0.3s;
 }
 
-/* Gallery Carousel */
 .carousel {
   position: relative;
   overflow: hidden;
@@ -1216,7 +1195,6 @@ body {
   border-color: var(--gold);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
 
   .nav-links,

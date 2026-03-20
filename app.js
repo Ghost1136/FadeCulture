@@ -1,21 +1,15 @@
-// Fade Culture Barber - Main JavaScript
-// Reservas globales via Google Apps Script + Google Sheets
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ══════════════════════════════════════════════════
-  //  ⚠️  REEMPLAZA ESTA URL con la de tu deployment
-  //  Apps Script > Deploy > Manage deployments > URL
-  // ══════════════════════════════════════════════════
   const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxQsMQALFbHoMJitrkSAroWNhv484sckRU9OQVuCBFT-hJwQ0dkfK8HWbhZsKCdBp9KpQ/exec';
 
-  // ── Navbar scroll effect ──
+
   const navbar = document.querySelector('.navbar');
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 50);
   });
 
-  // ── Mobile menu ──
+
   const menuBtn = document.querySelector('.menu-btn');
   const mobileMenu = document.querySelector('.mobile-menu');
   menuBtn.addEventListener('click', () => {
@@ -31,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ── Barbers ──
+
   const barbers = [
     { id: 1, name: 'Jose Luis Musto', specialty: 'Fades & Diseños', img: 'img/barber1.png' },
     { id: 2, name: 'Edinho Alcazar', specialty: 'Cortes Clásicos', img: 'img/barber2.png' },
@@ -39,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { id: 4, name: 'Roberto Méndez', specialty: 'Cortes Modernos', img: 'img/barber4.png' }
   ];
 
-  // Ahora son 4 pasos: 1=Barbero, 2=Tus datos, 3=Fecha&Hora, 4=Confirmar
+
   let currentStep = 1;
   let selectedBarber = null;
   let clientName = '';
@@ -53,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnNext = document.getElementById('btn-next');
   const btnBack = document.getElementById('btn-back');
 
-  // ── API helpers ──
+
   async function fetchBookedSlots(barberId, dateStr) {
     try {
       const url = `${APPS_SCRIPT_URL}?action=getBooked&barberId=${barberId}&date=${dateStr}`;
@@ -80,8 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // ── Time slots ──
-  // Intervalos de 1 hora (sin pausa al mediodía)
+
   const allTimes = [
     '09:00', '10:00', '11:00', '12:00',
     '13:00', '14:00', '15:00', '16:00',
@@ -122,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderTimeSlots();
   }
 
-  // ── Date grid ──
+
   function generateDates() {
     const grid = document.getElementById('date-grid');
     grid.innerHTML = '';
@@ -150,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // ── Selection handlers ──
+
   async function selectDate(el, dateObj) {
     document.querySelectorAll('.date-option').forEach(e => e.classList.remove('selected'));
     el.classList.add('selected');
@@ -168,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNav();
   }
 
-  // ── Client form validation ──
+
   function validateClientForm() {
     const nameVal = document.getElementById('client-name').value.trim();
     const emailVal = document.getElementById('client-email').value.trim();
@@ -176,11 +169,11 @@ document.addEventListener('DOMContentLoaded', () => {
     return nameVal.length >= 2 && emailOk;
   }
 
-  // Listen for input changes in step 2 to enable/disable Next
+
   document.getElementById('client-name').addEventListener('input', updateNav);
   document.getElementById('client-email').addEventListener('input', updateNav);
 
-  // ── Barber options ──
+
   function renderBarberOptions() {
     const container = document.getElementById('barber-options');
     container.innerHTML = '';
@@ -202,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── Step navigation ──
+
   async function goToStep(step) {
     currentStep = step;
     bookingSteps.forEach(s => s.classList.remove('active'));
@@ -253,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ? `${days[selectedDate.getDay()]} ${selectedDate.getDate()} de ${months[selectedDate.getMonth()]}`
       : '';
 
-    // Leer nombre y correo del formulario
+
     clientName = document.getElementById('client-name').value.trim();
     clientEmail = document.getElementById('client-email').value.trim();
 
@@ -265,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('confirm-email').textContent = clientEmail;
   }
 
-  // ── Confirm booking ──
+
   btnNext.addEventListener('click', async () => {
     if (currentStep < 4) {
       goToStep(currentStep + 1);
@@ -295,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentStep > 1) goToStep(currentStep - 1);
   });
 
-  // ── Modal close & reset ──
+
   document.getElementById('modal-close').addEventListener('click', () => {
     document.getElementById('success-modal').classList.remove('active');
     selectedBarber = null;
@@ -310,12 +303,12 @@ document.addEventListener('DOMContentLoaded', () => {
     renderBarberOptions();
   });
 
-  // ── Init ──
+
   renderBarberOptions();
   goToStep(1);
 
 
-  // ── Gallery Carousel ──
+
   const track = document.getElementById('carousel-track');
   const slides = track.querySelectorAll('.carousel-slide');
   const dots = document.querySelectorAll('.dot');
@@ -340,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   resetAutoplay();
 
-  // Touch swipe support
+
   let touchStartX = 0;
   track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
   track.addEventListener('touchend', e => {
@@ -351,7 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ── Scroll animations ──
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
