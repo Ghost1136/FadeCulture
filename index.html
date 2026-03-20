@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fade Culture Barber | Barbería de Élite</title>
+  <meta name="description"
+    content="Fade Culture Barber - La barbería donde el estilo se encuentra con la cultura. Reserva tu cita con nuestros barberos expertos.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="Logo.jpg" type="image/jpeg">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <img src="Logo.jpg" alt="Fade Culture Barber">
+        <span>FADE CULTURE</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#barberos">Barberos</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="#reservas" class="nav-cta">Reservar Ahora</a>
+      <button class="menu-btn" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#barberos">Barberos</a>
+    <a href="#reservas">Reservar Cita</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-badge">✦ Barbería Premium ✦</div>
+      <h1>Donde el <span class="gold">Estilo</span> se Encuentra con la <span class="gold">Cultura</span></h1>
+      <p class="hero-subtitle">Más que un corte, una experiencia. Nuestros barberos expertos transforman tu look con
+        precisión, arte y dedicación.</p>
+      <div class="hero-buttons">
+        <a href="#reservas" class="btn-primary">✂ Reservar Cita</a>
+        <a href="#servicios" class="btn-secondary">Ver Servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Carousel -->
+  <section class="section" id="galeria">
+    <div class="section-header">
+      <div class="section-label">Nuestra Barbería</div>
+      <h2 class="section-title">Fade Culture en Acción</h2>
+      <p class="section-desc">Conoce nuestro espacio, nuestro equipo y el arte que creamos cada día.</p>
+    </div>
+    <div class="carousel">
+      <div class="carousel-track" id="carousel-track">
+        <div class="carousel-slide">
+          <img src="img/Fondo.png" alt="Fade Culture Barbería">
+        </div>
+        <div class="carousel-slide">
+          <img src="img/Team.png" alt="Nuestro Equipo">
+        </div>
+        <div class="carousel-slide">
+          <img src="img/MustoCorte.png" alt="Musto en Acción">
+        </div>
+      </div>
+      <button class="carousel-btn carousel-btn-prev" id="carousel-prev" aria-label="Anterior">‹</button>
+      <button class="carousel-btn carousel-btn-next" id="carousel-next" aria-label="Siguiente">›</button>
+      <div class="carousel-dots" id="carousel-dots">
+        <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+        <button class="dot" data-index="1" aria-label="Slide 2"></button>
+        <button class="dot" data-index="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="servicios">
+    <div class="section-header">
+      <div class="section-label">Lo que ofrecemos</div>
+      <h2 class="section-title">Nuestros Servicios</h2>
+      <p class="section-desc">Cada servicio está pensado para resaltar tu estilo personal con los más altos estándares
+        de calidad.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">💈</div>
+        <h3>Fade Premium</h3>
+        <p>Degradado experto con transiciones impecables. El sello de Fade Culture.</p>
+        <div class="service-price">S/ 35</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🪒</div>
+        <h3>Afeitado & Barba</h3>
+        <p>Perfilado de barba con navaja, toalla caliente y aceites premium.</p>
+        <div class="service-price">S/ 20</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💎</div>
+        <h3>Combo VIP</h3>
+        <p>Corte + barba + lavado + masaje facial. La experiencia completa.</p>
+        <div class="service-price">S/ 55</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3>Diseño Artístico</h3>
+        <p>Líneas, figuras y diseños personalizados con máxima precisión.</p>
+        <div class="service-price">S/ 40</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">👦</div>
+        <h3>Corte Kids</h3>
+        <p>Cortes divertidos y cómodos para los más pequeños de la casa.</p>
+        <div class="service-price">S/ 20</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Barbers -->
+  <section class="section" id="barberos">
+    <div class="section-header">
+      <div class="section-label">Nuestro Equipo</div>
+      <h2 class="section-title">Conoce a Nuestros Barberos</h2>
+      <p class="section-desc">Profesionales apasionados por su arte, cada uno con un estilo único que se adapta a ti.
+      </p>
+    </div>
+    <div class="barbers-grid">
+      <div class="barber-card">
+        <div class="barber-img-wrapper">
+          <img src="img/barber1.png" alt="Jose Luis Musto" class="barber-img">
+        </div>
+        <div class="barber-info">
+          <h3>Jose Luis Musto</h3>
+          <div class="specialty">Fades & Diseños</div>
+          <div class="rating"><span class="stars">★★★★★</span> 5.0 (150+ reseñas)</div>
+        </div>
+      </div>
+      <div class="barber-card">
+        <div class="barber-img-wrapper">
+          <img src="img/barber2.png" alt="Edinho Alcazar" class="barber-img">
+        </div>
+        <div class="barber-info">
+          <h3>Edinho Alcazar</h3>
+          <div class="specialty">Cortes Clásicos</div>
+          <div class="rating"><span class="stars">★★★★★</span> 5.0 (120+ reseñas)</div>
+        </div>
+      </div>
+      <div class="barber-card">
+        <div class="barber-img-wrapper">
+          <img src="img/barber3.png" alt="Dylan Smith" class="barber-img">
+        </div>
+        <div class="barber-info">
+          <h3>Dylan Smith</h3>
+          <div class="specialty">Barbas & Estilos</div>
+          <div class="rating"><span class="stars">★★★★★</span> 5.0 (85+ reseñas)</div>
+        </div>
+      </div>
+      <div class="barber-card">
+        <div class="barber-img-wrapper">
+          <img src="img/barber4.png" alt="Roberto Méndez" class="barber-img">
+        </div>
+        <div class="barber-info">
+          <h3>Roberto Méndez</h3>
+          <div class="specialty">Cortes Modernos</div>
+          <div class="rating"><span class="stars">★★★★★</span> 5.0 (98+ reseñas)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section class="section" id="reservas">
+    <div class="section-header">
+      <div class="section-label">Agenda tu cita</div>
+      <h2 class="section-title">Reserva en 4 Pasos</h2>
+      <p class="section-desc">Selecciona tu barbero, ingresa tus datos, elige el día y hora, y confirma tu reserva.</p>
+    </div>
+    <div class="booking-container">
+
+      <!-- Steps indicator — ahora son 4 -->
+      <div class="booking-steps">
+        <div class="step-indicator active">
+          <div class="step-num">1</div>
+          <span class="step-label">Barbero</span>
+        </div>
+        <div class="step-indicator">
+          <div class="step-num">2</div>
+          <span class="step-label">Tus Datos</span>
+        </div>
+        <div class="step-indicator">
+          <div class="step-num">3</div>
+          <span class="step-label">Fecha & Hora</span>
+        </div>
+        <div class="step-indicator">
+          <div class="step-num">4</div>
+          <span class="step-label">Confirmar</span>
+        </div>
+      </div>
+
+      <!-- Step 1: Barber -->
+      <div class="booking-step active" id="step-1">
+        <div class="step-title">Elige tu Barbero</div>
+        <div class="barber-options" id="barber-options"></div>
+      </div>
+
+      <!-- Step 2: Client data -->
+      <div class="booking-step" id="step-2">
+        <div class="step-title">Tus Datos de Contacto</div>
+        <div class="client-form">
+          <div class="form-group">
+            <label for="client-name">
+              <span class="form-icon">👤</span> Nombre completo
+            </label>
+            <input type="text" id="client-name" placeholder="Ej: Juan Pérez" autocomplete="name" maxlength="80">
+          </div>
+          <div class="form-group">
+            <label for="client-email">
+              <span class="form-icon">✉️</span> Correo electrónico
+            </label>
+            <input type="email" id="client-email" placeholder="Ej: juan@correo.com" autocomplete="email"
+              maxlength="120">
+            <span class="form-hint">Te enviaremos un recordatorio a este correo.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Date & Time -->
+      <div class="booking-step" id="step-3">
+        <div class="step-title">Selecciona Fecha</div>
+        <div class="date-grid" id="date-grid"></div>
+        <div class="step-title" style="margin-top:1.5rem;">Selecciona Hora</div>
+        <div class="time-grid" id="time-grid"></div>
+      </div>
+
+      <!-- Step 4: Confirm -->
+      <div class="booking-step" id="step-4">
+        <div class="step-title">Confirma tu Reserva</div>
+        <div class="confirm-card">
+          <div class="confirm-row">
+            <span class="confirm-label">👤 Cliente</span>
+            <span class="confirm-value" id="confirm-name">—</span>
+          </div>
+          <div class="confirm-row">
+            <span class="confirm-label">✉️ Correo</span>
+            <span class="confirm-value" id="confirm-email">—</span>
+          </div>
+          <div class="confirm-row">
+            <span class="confirm-label">💈 Barbero</span>
+            <span class="confirm-value" id="confirm-barber">—</span>
+          </div>
+          <div class="confirm-row">
+            <span class="confirm-label">✂️ Especialidad</span>
+            <span class="confirm-value" id="confirm-service">—</span>
+          </div>
+          <div class="confirm-row">
+            <span class="confirm-label">📅 Fecha</span>
+            <span class="confirm-value" id="confirm-date">—</span>
+          </div>
+          <div class="confirm-row">
+            <span class="confirm-label">🕐 Hora</span>
+            <span class="confirm-value" id="confirm-time">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="booking-nav">
+        <button class="btn-back" id="btn-back" style="display:none;">← Atrás</button>
+        <button class="btn-next" id="btn-next" disabled>Siguiente →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contacto">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Fade Culture Barber</h4>
+        <p>Donde el estilo se encuentra con la cultura. Más que una barbería, una experiencia de transformación
+          personal.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Horario</h4>
+        <p>Lunes - Viernes: 9:00 AM - 7:00 PM</p>
+        <p>Sábados: 9:00 AM - 5:00 PM</p>
+        <p>Domingos: Cerrado</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>📍 Av. Principal 123, Lima</p>
+        <p>📞 +51 999 888 777</p>
+        <p>✉️ info@fadeculture.com</p>
+      </div>
+      <div class="footer-col">
+        <h4>Síguenos</h4>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Fade Culture Barber. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="success-modal">
+    <div class="modal">
+      <div class="modal-icon">✓</div>
+      <h3>¡Reserva Confirmada!</h3>
+      <p>Tu cita ha sido registrada exitosamente. Te enviaremos un recordatorio antes de tu visita. ¡Te esperamos!</p>
+      <button class="btn-primary" id="modal-close">Entendido</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
